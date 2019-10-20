@@ -1,21 +1,21 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 
-import { HomeRoutingModule } from "./home-routing.module";
-import { HomeComponent } from "./home.component";
+import { CollectionsRoutingModule } from "./collections-routing.module";
+import { CollectionsComponent } from "./collections.component";
 import { ItemDetailComponent } from "./item-detail/item-detail.component";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        HomeRoutingModule
+        CollectionsRoutingModule
     ],
     declarations: [
-        HomeComponent,
+        CollectionsComponent,
         ItemDetailComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class HomeModule { }
+export class CollectionsModule { }

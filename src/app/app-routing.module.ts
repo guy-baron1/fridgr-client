@@ -6,15 +6,15 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 const routes: Routes = [
     {
         path: "",
-        redirectTo: "/(homeTab:home/default//newsFeedTab:newsFeed/default//shoppingListsTab:shoppingLists/default)",
+        redirectTo: "/(collectionsTab:collections/default//newsFeedTab:newsFeed/default//shoppingListsTab:shoppingLists/default)",
         pathMatch: "full"
     },
 
     {
-        path: "home",
+        path: "collections",
         component: NSEmptyOutletComponent,
-        loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule),
-        outlet: "homeTab"
+        loadChildren: () => import("~/app/collections/collections.module").then((m) => m.CollectionsModule),
+        outlet: "collectionsTab"
     },
     {
         path: "newsFeed",

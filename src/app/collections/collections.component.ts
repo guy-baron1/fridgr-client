@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { DataService, IDataItem } from "../shared/data.service";
 
 @Component({
-    selector: "Home",
-    templateUrl: "./home.component.html"
+    selector: "Collections",
+    templateUrl: "./collections.component.html"
 })
-export class HomeComponent implements OnInit {
+export class CollectionsComponent implements OnInit {
     items: Array<IDataItem>;
 
     constructor(private _itemService: DataService) { }
