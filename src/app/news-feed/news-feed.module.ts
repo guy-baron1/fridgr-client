@@ -1,19 +1,19 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "nativescript-angular/common";
 
-import { SearchRoutingModule } from "./search-routing.module";
-import { SearchComponent } from "./search.component";
+import { NewsFeedRoutingModule } from "./news-feed-routing.module";
+import { NewsFeedComponent } from "./news-feed.component";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        SearchRoutingModule
+        NewsFeedRoutingModule
     ],
     declarations: [
-        SearchComponent
+        NewsFeedComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
     ]
 })
-export class SearchModule { }
+export class NewsFeedModule { }
