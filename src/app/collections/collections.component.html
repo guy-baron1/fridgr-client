@@ -1,11 +1,16 @@
 <ActionBar class="action-bar">
     <Label class="action-bar-title" text="Collections"></Label>
 </ActionBar>
-
-<GridLayout class="page page-content">
+<!-- Currently static values until integration with db/server-->
+<GridLayout class="page page-content" *ngIf="false">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
             <Label [nsRouterLink]="['../item', item.id]" [text]="item.name" class="list-group-item"></Label>
         </ng-template>
     </ListView>
+</GridLayout>
+
+<GridLayout class="page page-content" *ngIf="true">
+<Label class="page-icon fa" text="&#xf01c;"></Label>
+    <Label class="page-placeholder" text="No collections"></Label>
 </GridLayout>
