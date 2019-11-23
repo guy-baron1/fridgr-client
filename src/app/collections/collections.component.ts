@@ -1,16 +1,24 @@
 import { Component, OnInit } from "@angular/core";
-import { DataService, IDataItem } from "../shared/data.service";
+import { ApiService, IItem, ICollection } from "../shared/api.service";
 
 @Component({
     selector: "Collections",
     templateUrl: "./collections.component.html"
 })
 export class CollectionsComponent implements OnInit {
-    items: Array<IDataItem>;
+    collections: Array<ICollection>;
+    mockCollections: Array<ICollection>;
 
-    constructor(private _itemService: DataService) { }
+    constructor(private apiService: ApiService) { }
 
     ngOnInit(): void {
-        this.items = this._itemService.getItems();
+        this.apiService.getCollections().then((collections) => {
+            this.collections = collections.map((collection) => {
+                return {
+                    name: collection.name,
+                    _id: collection._id
+                };
+            });
+        });
     }
 }
