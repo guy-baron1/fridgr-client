@@ -3,7 +3,7 @@
 </ActionBar>
 
 <GridLayout class="page page-content" *ngIf="collections">
-    <ListView [items]="collections" class="list-group">
+    <ListView [items]="collections" (itemTap)="openCollectionItemsModal($event)" class="list-group">
         <ng-template let-collection="item">
             <Label [text]="collection.name" class="list-group-item"></Label>
         </ng-template>
